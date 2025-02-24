@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectBackend.Data;
@@ -7,6 +8,7 @@ namespace ProjectBackend.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[EnableCors("_myAllowSpecificOrigins")] 
 public class CoursesController : ControllerBase
 {
     private readonly AppDbContext _context;
